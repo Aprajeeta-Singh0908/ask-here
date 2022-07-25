@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Jul 2022 16:45:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../cdn.jsdelivr.net/npm/bootstrap%405.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../cdn.jsdelivr.net/npm/bootstrap-icons%401.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../stylesheets/styleSheet.css">
+    <title>College-Quora</title>
+</head>
+<body class="d-flex flex-column vh-100" style="background-color: #f5f5f5;">
+    <div id="t" ></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">College-Quora</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" container collapse navbar-collapse" id="navbarNavAltMarkup">
+    
+             
+                  <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="../register.html">Register</a>
+                    <a class="nav-link active" href="../login.html">Sign-In</a>
+                  </div>
+            
+        </div>
+    </div>
+</nav> 
+    <div class="container smallS">
+        <div class="row" style="background-color: #faf8f8; z-index: -1;">
+            <div class="col-8 offset-2 smallS">
+                 
+  
+                
+<div class="my-3">
+    <div class="h1 font-weight-bold" style="color: blueviolet; text-transform: capitalize;"> Why is life so cruel ? </div>
+    <span class="h3 font-weight-bold ">  </span>
+</div>
+<hr>
+
+<div id="infoBlock" class="row" >
+    <div class="col">
+        <div class="container d-flex justify-content-start align-items-center p-1" >
+            <span class="lead"> 4 answers <span class="blockquote-footer"> Asked on  July 16, 2021 at 9:36 </span> </span>
+        </div>
+    </div>
+    <div class="col">
+        <div class="container d-flex justify-content-end align-items-center">
+             
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Button trigger modal -->
+<div class="d-flex justify-content-center align-items-center mb-5">
+    <button type="button" class="btn btn-success rounded-pill " data-bs-toggle="modal" data-bs-target="#addAnswer">
+        Answer    
+    </button>
+</div>
+  
+<!-- Modal for answer-->
+<div class="modal fade" id="addAnswer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Answer :</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="http://safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11/review" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <textarea class="form-control" name="answer" id="answer" cols="15" rows="10" required ></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a valid answer.
+                </div>
+            </div>
+            <div class="d-flex justify-content-start align-items-center my-1">
+                <div class="mb-3">
+                    <!-- <i class="bi bi-images"></i> -->
+                    <label for="images" class="form-label"></label>
+                    <input class="form-control form-control-sm" type="file" id="images" name="image" accept=".png, .jpg, .jpeg" multiple>
+                </div>
+            </div>
+            <div class="modal-footer container d-flex justify-content-center align-items-center"> 
+                <button class="btn btn-success ">Submit</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal for question editing-->
+<div class="modal fade" id="editQuestion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Question :</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="my-3 mx-3 validated-form" action="http://safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11/edit?_method=PUT" method="POST" novalidate>
+            <div class="mb-3">
+                <label for="heading" class="form-label">Heading : </label>
+                <input type="text" class="form-control" id="heading" value="Why is life so cruel ?" name="question[heading]" required>
+                <label for="question" class="form-label">Question : </label>
+                <input type="text" class="form-control" id="question" value="" name="question[question]" required>
+            </div>
+            <div class="container d-flex justify-content-center align-items-center mt-2 mb-3">
+                <button class="btn btn-primary">DONE</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+    <div class="card my-2">
+        <div class="card-body d-flex" >
+            <div class="" style=" width: min-content; margin-right: 1em;">
+                <!-- UPVOTE AND DOWNVOTE LOGIC -->
+
+                <div id="upvote">
+                    <a href="60f1531009172300152b4b11/upvote/60f19e0b8230090015420c73">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                    </a>
+                </div>
+                3 
+                <div id="downvote">
+                    <a id="downvote" href="60f1531009172300152b4b11/downvote/60f19e0b8230090015420c73">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div style="width:100%;">
+                <div style="display: block;">
+                    <div class="d-flex align-items-top" style="justify-content: space-between;">
+                        <div class="d-block">
+                            <h6 class="card-title font-weight-bold" onclick="location.href='../profile/60f19da78230090015420c6a.html';" style="cursor:pointer;">
+                                  
+                                Prajapati  <span class="blockquote-footer"> Answered July 16, 2021 </span>
+                            </h6>
+                        </div>
+                        <div class="d-block">
+                            <div class="btn-group">
+                                <button class="btn btn-white btn-sm" type="button"data-bs-toggle="dropdown"aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF UPVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_60f19e0b8230090015420c73upvotes">
+                                            Up Votes
+                                        </button>
+                                        
+                                    </li>
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF DOWNVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_60f19e0b8230090015420c73downvotes">
+                                            Down Votes
+                                        </button>
+                                        
+                                    </li>
+
+                                     
+                                </ul>
+                            </div>       
+                        </div>
+                    </div>  
+                </div>
+                <div class="" style="display: block;">
+                    Haan vro bharosa rakho sab jldi thik ho jayega 
+                </div>
+                 
+            </div>
+
+            <!-- Modal for upVotes -->
+            <div class="modal fade" id="_60f19e0b8230090015420c73upvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Up Voters - </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- list of upvoters -->
+                        <ul class="list-group">
+                             
+                                 
+                                    <li class="list-group-item"> 20JE0185 Arti Yadav  </li>
+                                 
+                                    <li class="list-group-item"> Rohit Kumar  </li>
+                                 
+                                    <li class="list-group-item"> Aprajeeta Singh  </li>
+                                 
+                             
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal for donwVotes-->
+            <div class="modal fade" id="_60f19e0b8230090015420c73downvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Down Voters -</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- List of donwvVoters -->
+                        <ul class="list-group">
+                             
+                                <div class="alert alert-light" role="alert">
+                                    No Down Votes found !
+                                </div>
+                             
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Modal for editing answers -->
+            <div class="modal fade" id="_60f19e0b8230090015420c73editBtn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit answer -</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="my-3 mx-3 validated-form" action="http://safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11/edit/60f19e0b8230090015420c73?_method=PUT" method="POST" novalidate>
+                                <div class="mb-3">
+                                    <label for="question" class="form-label">Answer : </label>
+                                    <input type="text" class="form-control" id="question" value="Haan vro bharosa rakho sab jldi thik ho jayega"name="newAnswer" required>
+                                </div>
+                                <div class="container d-flex justify-content-center align-items-center mt-2 mb-3">
+                                    <button class="btn btn-primary">DONE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="card my-2">
+        <div class="card-body d-flex" >
+            <div class="" style=" width: min-content; margin-right: 1em;">
+                <!-- UPVOTE AND DOWNVOTE LOGIC -->
+
+                <div id="upvote">
+                    <a href="60f1531009172300152b4b11/upvote/61008aba03f89b0015475e7c">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                    </a>
+                </div>
+                1 
+                <div id="downvote">
+                    <a id="downvote" href="60f1531009172300152b4b11/downvote/61008aba03f89b0015475e7c">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div style="width:100%;">
+                <div style="display: block;">
+                    <div class="d-flex align-items-top" style="justify-content: space-between;">
+                        <div class="d-block">
+                            <h6 class="card-title font-weight-bold" onclick="location.href='../profile/60f1530109172300152b4b0b.html';" style="cursor:pointer;">
+                                  
+                                Rohit Kumar  <span class="blockquote-footer"> Answered July 27, 2021 </span>
+                            </h6>
+                        </div>
+                        <div class="d-block">
+                            <div class="btn-group">
+                                <button class="btn btn-white btn-sm" type="button"data-bs-toggle="dropdown"aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF UPVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_61008aba03f89b0015475e7cupvotes">
+                                            Up Votes
+                                        </button>
+                                        
+                                    </li>
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF DOWNVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_61008aba03f89b0015475e7cdownvotes">
+                                            Down Votes
+                                        </button>
+                                        
+                                    </li>
+
+                                     
+                                </ul>
+                            </div>       
+                        </div>
+                    </div>  
+                </div>
+                <div class="" style="display: block;">
+                    😠 
+                </div>
+                 
+                <div id="carouselSize">
+                    <div id="_61008aba03f89b0015475e7c" class="carousel slide card-img" data-bs-ride="carousel">
+                         
+                        
+                        <div class="carousel-inner">
+                             
+                                <div class="card-img carousel-item active">
+                                    <img class="d-block w-100" src="../../res.cloudinary.com/dauxdhnsr/image/upload/v1627425466/College-Quora/ro7xqwsm6gpzkeeficmr.jpg" alt="...">
+                                </div>
+                             
+                        </div>
+                        
+                         
+                    </div>
+                </div>
+                 
+            </div>
+
+            <!-- Modal for upVotes -->
+            <div class="modal fade" id="_61008aba03f89b0015475e7cupvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Up Voters - </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- list of upvoters -->
+                        <ul class="list-group">
+                             
+                                 
+                                    <li class="list-group-item"> Cake  </li>
+                                 
+                             
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal for donwVotes-->
+            <div class="modal fade" id="_61008aba03f89b0015475e7cdownvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Down Voters -</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- List of donwvVoters -->
+                        <ul class="list-group">
+                             
+                                <div class="alert alert-light" role="alert">
+                                    No Down Votes found !
+                                </div>
+                             
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Modal for editing answers -->
+            <div class="modal fade" id="_61008aba03f89b0015475e7ceditBtn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit answer -</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="my-3 mx-3 validated-form" action="http://safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11/edit/61008aba03f89b0015475e7c?_method=PUT" method="POST" novalidate>
+                                <div class="mb-3">
+                                    <label for="question" class="form-label">Answer : </label>
+                                    <input type="text" class="form-control" id="question" value="😠"name="newAnswer" required>
+                                </div>
+                                <div class="container d-flex justify-content-center align-items-center mt-2 mb-3">
+                                    <button class="btn btn-primary">DONE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="card my-2">
+        <div class="card-body d-flex" >
+            <div class="" style=" width: min-content; margin-right: 1em;">
+                <!-- UPVOTE AND DOWNVOTE LOGIC -->
+
+                <div id="upvote">
+                    <a href="60f1531009172300152b4b11/upvote/60f27b1d79df120015c06eea">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                    </a>
+                </div>
+                0 
+                <div id="downvote">
+                    <a id="downvote" href="60f1531009172300152b4b11/downvote/60f27b1d79df120015c06eea">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div style="width:100%;">
+                <div style="display: block;">
+                    <div class="d-flex align-items-top" style="justify-content: space-between;">
+                        <div class="d-block">
+                            <h6 class="card-title font-weight-bold" onclick="location.href='../profile/60f19e5f8230090015420c7a.html';" style="cursor:pointer;">
+                                  
+                                Prakhar Shukla  <span class="blockquote-footer"> Answered July 17, 2021 </span>
+                            </h6>
+                        </div>
+                        <div class="d-block">
+                            <div class="btn-group">
+                                <button class="btn btn-white btn-sm" type="button"data-bs-toggle="dropdown"aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF UPVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_60f27b1d79df120015c06eeaupvotes">
+                                            Up Votes
+                                        </button>
+                                        
+                                    </li>
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF DOWNVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_60f27b1d79df120015c06eeadownvotes">
+                                            Down Votes
+                                        </button>
+                                        
+                                    </li>
+
+                                     
+                                </ul>
+                            </div>       
+                        </div>
+                    </div>  
+                </div>
+                <div class="" style="display: block;">
+                    Ab hai toh hai...kya kr sakte hai🌝 
+                </div>
+                 
+            </div>
+
+            <!-- Modal for upVotes -->
+            <div class="modal fade" id="_60f27b1d79df120015c06eeaupvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Up Voters - </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- list of upvoters -->
+                        <ul class="list-group">
+                             
+                                 
+                                    <li class="list-group-item"> Prakhar Shukla  </li>
+                                 
+                             
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal for donwVotes-->
+            <div class="modal fade" id="_60f27b1d79df120015c06eeadownvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Down Voters -</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- List of donwvVoters -->
+                        <ul class="list-group">
+                             
+                                 
+                                    <li class="list-group-item"> Rohit Kumar  </li>
+                                 
+                             
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Modal for editing answers -->
+            <div class="modal fade" id="_60f27b1d79df120015c06eeaeditBtn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit answer -</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="my-3 mx-3 validated-form" action="http://safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11/edit/60f27b1d79df120015c06eea?_method=PUT" method="POST" novalidate>
+                                <div class="mb-3">
+                                    <label for="question" class="form-label">Answer : </label>
+                                    <input type="text" class="form-control" id="question" value="Ab hai toh hai...kya kr sakte hai🌝"name="newAnswer" required>
+                                </div>
+                                <div class="container d-flex justify-content-center align-items-center mt-2 mb-3">
+                                    <button class="btn btn-primary">DONE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="card my-2">
+        <div class="card-body d-flex" >
+            <div class="" style=" width: min-content; margin-right: 1em;">
+                <!-- UPVOTE AND DOWNVOTE LOGIC -->
+
+                <div id="upvote">
+                    <a href="60f1531009172300152b4b11/upvote/61018501e968f400159650c3">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                    </a>
+                </div>
+                -1 
+                <div id="downvote">
+                    <a id="downvote" href="60f1531009172300152b4b11/downvote/61018501e968f400159650c3">
+                        <i class="bi bi-hand-thumbs-down-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div style="width:100%;">
+                <div style="display: block;">
+                    <div class="d-flex align-items-top" style="justify-content: space-between;">
+                        <div class="d-block">
+                            <h6 class="card-title font-weight-bold" onclick="location.href='../profile/60f19e5f8230090015420c7a.html';" style="cursor:pointer;">
+                                  
+                                Prakhar Shukla  <span class="blockquote-footer"> Answered July 28, 2021 </span>
+                            </h6>
+                        </div>
+                        <div class="d-block">
+                            <div class="btn-group">
+                                <button class="btn btn-white btn-sm" type="button"data-bs-toggle="dropdown"aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF UPVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_61018501e968f400159650c3upvotes">
+                                            Up Votes
+                                        </button>
+                                        
+                                    </li>
+                                    <li>
+                                        <!-- LOGIC FOR LIST OF DOWNVOTERS -->
+                                        <button type="button" class="btn btn-white btn-sm "data-bs-toggle="modal"data-bs-target="#_61018501e968f400159650c3downvotes">
+                                            Down Votes
+                                        </button>
+                                        
+                                    </li>
+
+                                     
+                                </ul>
+                            </div>       
+                        </div>
+                    </div>  
+                </div>
+                <div class="" style="display: block;">
+                    Dekho Dekho 
+                </div>
+                 
+                <div id="carouselSize">
+                    <div id="_61018501e968f400159650c3" class="carousel slide card-img" data-bs-ride="carousel">
+                         
+                        
+                        <div class="carousel-inner">
+                             
+                                <div class="card-img carousel-item active">
+                                    <img class="d-block w-100" src="../../res.cloudinary.com/dauxdhnsr/image/upload/v1627489537/College-Quora/mxlhbdsplzasvodem51k.jpg" alt="...">
+                                </div>
+                             
+                        </div>
+                        
+                         
+                    </div>
+                </div>
+                 
+            </div>
+
+            <!-- Modal for upVotes -->
+            <div class="modal fade" id="_61018501e968f400159650c3upvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Up Voters - </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- list of upvoters -->
+                        <ul class="list-group">
+                             
+                                <div class="alert alert-light" role="alert">
+                                    No Up Votes found !
+                                </div>
+                             
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal for donwVotes-->
+            <div class="modal fade" id="_61018501e968f400159650c3downvotes" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Down Voters -</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- List of donwvVoters -->
+                        <ul class="list-group">
+                             
+                                 
+                                    <li class="list-group-item"> Rohit Kumar  </li>
+                                 
+                             
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Modal for editing answers -->
+            <div class="modal fade" id="_61018501e968f400159650c3editBtn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Edit answer -</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="my-3 mx-3 validated-form" action="http://safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11/edit/61018501e968f400159650c3?_method=PUT" method="POST" novalidate>
+                                <div class="mb-3">
+                                    <label for="question" class="form-label">Answer : </label>
+                                    <input type="text" class="form-control" id="question" value="Dekho Dekho"name="newAnswer" required>
+                                </div>
+                                <div class="container d-flex justify-content-center align-items-center mt-2 mb-3">
+                                    <button class="btn btn-primary">DONE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+
+            </div>
+        </div>
+    </div>
+
+    <div id="topBox">
+        <a href="#t" class="top btn btn-secondary" type="button" > <i class="bi bi-arrow-up-circle-fill"></i> </a>
+    </div>
+    <footer class="footer bg-dark py-2 mt-auto" style="margin-top: 0.5em;">
+    <div class="container " style="text-align: center;">
+        <span class="text-muted"> College-Quora</span>
+    </div>
+</footer> 
+
+    
+    <script src="../../cdn.jsdelivr.net/npm/bootstrap%405.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="../javascripts/validateForm.js"></script>
+    <script src="../javascripts/indexjs.js" defer></script>
+    <script src="../javascripts/voteColor.js" defer></script>
+    <script src="../javascripts/validatePhotoes.js" defer></script>
+    <!-- <script src="/javascripts/indexjs.js" defer></script> -->
+
+    <script src="../../cdn.jsdelivr.net/npm/darkmode-js%401.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        
+    const options = {
+        bottom: '80px', // default: '32px'
+        right: '32px', // default: '32px'
+        left: 'unset', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        saveInCookies: true, // default: true,
+        label: '🌗', // default: ''
+        autoMatchOsTheme: true // default: true
+    }
+        function addDarkmodeWidget() {
+            new Darkmode(options).showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script> 
+</body>
+
+<!-- Mirrored from safe-woodland-91444.herokuapp.com/collegeQuora/60f1531009172300152b4b11 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Jul 2022 16:45:28 GMT -->
+</html>
